@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Conceptos Base y Preflight</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8">
+
+    <!-- Estos h1 y h2 tomarán los estilos definidos en @layer base -->
+    <h1>Título Principal (H1 con estilos base)</h1>
+    <p class="mb-8">Este párrafo tiene un margen inferior, pero el H1 de arriba tiene sus propios estilos definidos
+        globalmente.</p>
+
+    <h2>Subtítulo (H2 con estilos base)</h2>
+    <p>Texto normal para comparar.</p>
+
+    <hr class="my-8 border-gray-300">
+
+    <!-- Ejemplo de Utility Classes explícitas -->
+    <h1 class="text-blue-600">H1 con color azul explícito (mantiene tamaño base)</h1>
+
+    <div class="mt-8 p-4 bg-gray-100 rounded">
+        <h3 class="text-xl font-bold">Sin Estilos (H3)</h3>
+        <p>Como no hemos definido estilos base para h3, este se ve "resetado" por preflight (sin negrita ni tamaño
+            extra) a menos que le pongamos clases.</p>
+    </div>
+
+</body>
+
+</html>

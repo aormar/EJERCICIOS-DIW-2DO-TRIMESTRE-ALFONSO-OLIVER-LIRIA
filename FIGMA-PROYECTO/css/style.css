@@ -1,0 +1,250 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header y navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-main {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    margin: 0 40px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    font-weight: bold;
+    color: #1a237e;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #ff5722;
+}
+
+/* Sección principal */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: url(../img/Captura\ de\ pantalla\ 2025-11-12\ 194730.png);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ff5722;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Sección de Top Ventas */
+.top-sales {
+    margin: 40px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #1a237e;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff5722;
+}
+
+.comics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.comic-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.comic-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+}
+
+.comic-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.comic-subtitle {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Información de contacto */
+.contact-info {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.address {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #666;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .search-bar {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .comics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

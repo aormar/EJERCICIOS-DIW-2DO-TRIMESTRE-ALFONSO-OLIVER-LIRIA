@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colores Personalizados */
+    --color-brand-blue: #1e40af;
+    --color-brand-purple: #7c3aed;
+    --color-brand-pink: #ec4899;
+
+    /* Fuentes Personalizadas */
+    --font-display: "Plus Jakarta Sans", sans-serif;
+
+    /* Sombras Personalizadas */
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-card-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+@layer base {
+    h1 {
+        @apply text-4xl font-bold mb-6 text-slate-900;
+    }
+
+    h2 {
+        @apply text-2xl font-semibold mb-4 text-slate-800;
+    }
+}
+
+@layer components {
+
+    /* Button Component */
+    .btn-primary {
+        @apply bg-brand-blue text-white font-bold py-2 px-6 rounded-lg;
+        @apply hover:bg-blue-800 transition-colors duration-200;
+        @apply shadow-card hover:shadow-card-hover;
+    }
+
+    /* Card Component */
+    .card-custom {
+        @apply bg-white rounded-xl p-6 border border-gray-100;
+        @apply shadow-card transition-all duration-300;
+        @apply hover:shadow-card-hover hover:-translate-y-1;
+    }
+}
+
+@layer utilities {
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}

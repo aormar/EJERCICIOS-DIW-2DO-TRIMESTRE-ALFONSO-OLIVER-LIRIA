@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09. Grid Layout</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[Plus_Jakarta_Sans] bg-gray-50 p-6 md:p-12 space-y-16 pb-20">
+
+    <header class="mb-10 text-center md:text-left">
+        <h1 class="text-4xl font-bold text-slate-800">09. Grid Layout</h1>
+        <p class="text-slate-600 mt-2">Sistemas bidimensionales con CSS Grid.</p>
+    </header>
+
+    <!-- 1. Grid Básico -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-slate-700">1. Grid Básico (grid-cols-3 gap-4)</h2>
+        <div class="grid grid-cols-3 gap-4 bg-white p-4 rounded shadow">
+            <div class="bg-blue-100 p-4 rounded flex items-center justify-center font-bold text-blue-600">1</div>
+            <div class="bg-blue-100 p-4 rounded flex items-center justify-center font-bold text-blue-600">2</div>
+            <div class="bg-blue-100 p-4 rounded flex items-center justify-center font-bold text-blue-600">3</div>
+            <div class="bg-blue-100 p-4 rounded flex items-center justify-center font-bold text-blue-600">4</div>
+            <div class="bg-blue-100 p-4 rounded flex items-center justify-center font-bold text-blue-600">5</div>
+            <div class="bg-blue-100 p-4 rounded flex items-center justify-center font-bold text-blue-600">6</div>
+        </div>
+    </section>
+
+    <!-- 2. Spanning (Ocupar varias celdas) -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-slate-700">2. Spanning (col-span & row-span)</h2>
+        <div class="grid grid-cols-3 grid-rows-3 gap-4 bg-white p-4 rounded shadow h-80">
+            <!-- Row Span 2 -->
+            <div class="row-span-2 bg-purple-500 text-white p-4 rounded flex items-center justify-center">
+                Row Span 2
+            </div>
+
+            <!-- Items normales -->
+            <div class="bg-blue-400 text-white p-4 rounded flex items-center justify-center">1</div>
+            <div class="bg-blue-400 text-white p-4 rounded flex items-center justify-center">1</div>
+
+            <!-- Col Span 2 -->
+            <div class="col-span-2 bg-yellow-500 text-white p-4 rounded flex items-center justify-center">
+                Col Span 2
+            </div>
+
+            <!-- Item normal -->
+            <div class="bg-green-500 text-white p-4 rounded flex items-center justify-center">1</div>
+
+            <!-- Col Span Full (3) -->
+            <div class="col-span-3 bg-red-500 text-white p-4 rounded flex items-center justify-center">
+                Col Span 3 (Full)
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Dashboard Layout -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-slate-700">3. Dashboard Layout</h2>
+        <div class="grid grid-cols-4 grid-rows-3 gap-4 h-96 bg-gray-200 p-4 rounded border">
+
+            <!-- Header (Span 4) -->
+            <header class="col-span-4 bg-slate-800 text-white flex items-center px-6 rounded-lg">
+                <h1 class="font-bold">Dashboard HLANZ</h1>
+            </header>
+
+            <!-- Sidebar (Span Row 2) -->
+            <aside class="row-span-2 bg-slate-700 text-white p-4 rounded-lg hidden md:block">
+                <nav class="space-y-2 text-sm">
+                    <div class="bg-slate-600 p-2 rounded">Home</div>
+                    <div class="p-2">Analytics</div>
+                    <div class="p-2">Settings</div>
+                </nav>
+            </aside>
+
+            <!-- Main Content (Col Span 3, Row Span 2) -->
+            <main class="col-span-4 md:col-span-3 row-span-2 bg-white p-6 rounded-lg shadow relative">
+                <h2 class="text-xl font-semibold mb-2">Resumen de Actividad</h2>
+                <p class="text-gray-600">Este panel principal ocupa el espacio restante.</p>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="h-24 bg-indigo-50 rounded"></div>
+                    <div class="h-24 bg-indigo-50 rounded"></div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- 4. Responsive Product Grid -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4 text-slate-700">4. Galería Responsive de Productos</h2>
+        <p class="mb-4 text-sm text-gray-600">Redimensiona. De 1 columna (móvil) a 2 (md) a 3 (lg).</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border hover:shadow-xl transition-shadow">
+                <img src="assets/product_placeholder.png" alt="Product" class="w-full h-48 object-cover bg-gray-100">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">Gadget Pro</h3>
+                    <p class="text-gray-500 text-sm mt-1">Dispositivo de alta tecnología.</p>
+                    <button
+                        class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border hover:shadow-xl transition-shadow">
+                <img src="assets/product_placeholder.png" alt="Product" class="w-full h-48 object-cover bg-gray-100">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">Smart Device</h3>
+                    <p class="text-gray-500 text-sm mt-1">Conectividad total en tu hogar.</p>
+                    <button
+                        class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Card Destacada (Span 2 en LG) -->
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden border hover:shadow-xl transition-shadow lg:col-span-1 xl:col-span-1">
+                <div class="relative">
+                    <span
+                        class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded shadow">NUEVO</span>
+                    <img src="assets/product_placeholder.png" alt="Product"
+                        class="w-full h-48 object-cover bg-gray-100">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">Edición Limitada</h3>
+                    <p class="text-gray-500 text-sm mt-1">Diseño exclusivo y premium.</p>
+                    <button
+                        class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border hover:shadow-xl transition-shadow">
+                <img src="assets/product_placeholder.png" alt="Product" class="w-full h-48 object-cover bg-gray-100">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">Audio Master</h3>
+                    <p class="text-gray-500 text-sm mt-1">Calidad de sonido superior.</p>
+                    <button
+                        class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Comprar</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

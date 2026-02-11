@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03. Colores y Personalización</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="p-8 space-y-8 bg-gray-50">
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Uso Básico de Colores</h2>
+        <h1 class="bg-red-900 text-white p-4 rounded">Bienvenido a Tailwind (bg-red-900 text-white)</h1>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Opacidad y Transparencia</h2>
+        <!-- bg-black/90 y text-pink-900/20 -->
+        <h1 class="bg-black/90 text-pink-100/50 p-4 rounded text-3xl">Título con transparencias</h1>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Agrupación de Estilos</h2>
+        <div class="text-green-500 bg-black p-4 rounded">
+            <p>Este texto hereda el color verde</p>
+            <p>Este también</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Arbitrary Variants [&>*]</h2>
+        <div class="[&>*]:bg-blue-500 [&>*]:text-white [&>*]:p-4 [&>*]:rounded space-y-2">
+            <p>Soy azul con padding (vía padre)</p>
+            <p>Yo también (vía padre)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Valores Personalizados</h2>
+        <h1 class="bg-[#2E86AB] text-white p-4 rounded">Título con color personalizado directo [#2E86AB]</h1>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Ejemplo Práctico: Iconos SVG</h2>
+        <div class="flex items-center gap-4">
+            <p>Icono con fill-[#1877f2]:</p>
+            <!-- Icono de Facebook con color personalizado -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 fill-[#1877f2]">
+                <!-- Facebook path simplificado para el ejemplo -->
+                <path
+                    d="M14 13.5h2.5l1-4H14v-1.2c0-1.08.568-2.15 2.228-2.15H19v-3.7A28.16 28.16 0 0 0 15.688 2c-3.578 0-5.85 2.05-5.85 5.85v1.65H7v4h2.85v10.5h4V13.5Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+</body>
+
+</html>

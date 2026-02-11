@@ -1,0 +1,370 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-main {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    margin: 0 40px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    font-weight: bold;
+    color: #1a237e;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #ff5722;
+}
+
+/* Layout principal */
+.main-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Panel de filtros */
+.filter-panel {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.filter-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.filter-title {
+    font-size: 18px;
+    color: #1a237e;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff5722;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-title i {
+    font-size: 20px;
+}
+
+.filter-list {
+    list-style: none;
+}
+
+.filter-item {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-item:hover {
+    background-color: rgba(26, 35, 126, 0.1);
+}
+
+.filter-item.active {
+    background-color: #1a237e;
+    color: white;
+    font-weight: bold;
+}
+
+.filter-icon {
+    font-size: 18px;
+}
+
+/* Contenido principal */
+.content-area {
+    flex-grow: 1;
+}
+
+.categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.categories-title {
+    font-size: 24px;
+    color: #1a237e;
+}
+
+.comics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta de cómic */
+.comic-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.comic-badge {
+    padding: 5px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.badge-new {
+    background-color: #4CAF50;
+}
+
+.badge-offer {
+    background-color: #FF5722;
+}
+
+.comic-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+.comic-content {
+    padding: 20px;
+}
+
+.comic-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.comic-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.comic-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.comic-price {
+    margin-top: 15px;
+}
+
+.price-main {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+.price-old {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.price-offer {
+    font-size: 20px;
+    color: #FF5722;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #3949ab;
+}
+
+.cart-icon {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #666;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Notificación */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .filter-panel {
+        width: 100%;
+    }
+    
+    .comics-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .search-bar {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .comics-grid {
+        grid-template-columns: 1fr;
+    }
+}

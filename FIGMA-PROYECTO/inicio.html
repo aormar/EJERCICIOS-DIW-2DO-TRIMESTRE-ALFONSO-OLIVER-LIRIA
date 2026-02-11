@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraSur - Tu Nueva Universo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header con logo y navegación -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-main">LibraSur</div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">Tu Libreria</a>
+            <a href="./compra.html" target="_blank" rel="noopener noreferrer">Compra On-Line</a>
+            <a href="#" class="nav-item">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección principal hero -->
+    <section class="hero-section">
+        <h1 class="hero-title">Bienvenido a Tu Nuevo Universo</h1>
+        <h2 class="hero-subtitle">En Librasur, cada página es una puerta a una nueva dimensión</h2>
+        
+        <div class="hero-content">
+            <p>Somos más que una tienda online, somos el punto de encuentro para quienes buscamos aventuras a todo color, dramas en blanco y negro y héroes que viven entre viñetas. Aquí encontrarás desde los clásicos que forjarán la historia del cómic hasta las novedades más impactantes y los independientes que rompen moldes. Navega por nuestros estantes digitales, descubre nuevas voces y revive a tus personajes favoritos.</p>
+            <p style="margin-top: 15px; font-style: italic;">Gracias por elegirnos. Ahora, pasa la página... ¡Tu próxima gran historia te espera!</p>
+        </div>
+    </section>
+
+    <!-- Sección de Top Ventas -->
+    <section class="top-sales">
+        <h2 class="section-title">¡TOP VENTAS!</h2>
+        
+        <div class="comics-grid">
+            <!-- Primera fila -->
+            <div class="comic-card">
+                <img src="./img/02.mejores-autores-comic-original.jpg" alt="">
+                <h3 class="comic-title">AMAZING SPIDER-MAN</h3>
+            </div>
+            
+            <div class="comic-card">
+                <img src="./img/10.jpg" alt="">
+                <h3 class="comic-title">IRON MAN</h3>
+            </div>
+            
+            <div class="comic-card">
+                <img src="./img/el-capitan-america-se-suma-a-los-HWFXVG3MSREGDKSNFZLNOK3E64.avif" alt="">
+                <h3 class="comic-title">CAPTAIN AMERICA</h3>
+            </div>
+            
+            <div class="comic-card">
+                <img src="./img/infinite-crisis-superman.jpg" alt="">
+                <h3 class="comic-title">PUÑO DE HIERRO</h3>
+            </div>
+
+            <div class="comic-card">
+                <img src="./img/who-is-currently-the-most-powerful-superhero-in-marvel-v0-c3kz1cq7hqze1.webp" alt="">
+                <h3 class="comic-title">THE INCREDIBLE HULK</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información de contacto -->
+    <div class="contact-info">
+        <p class="address">Cale Faisán, 8, 18004 - Granada</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.aepd.es/politica-de-privacidad-y-aviso-legal" class="footer-link">Política de Privacidad</a>
+            <a href="#" class="footer-link">Cookies</a>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 DIW</p>
+            <p>Alfonso Oliver Liria</p>
+        </div>
+    </footer>
+
+    <script>
+        // Interactividad básica
+        document.addEventListener('DOMContentLoaded', function() {
+            // Efecto al pasar el mouse sobre los cómics
+            const comicCards = document.querySelectorAll('.comic-card');
+            comicCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                });
+            });
+            
+            // Simulación de búsqueda
+            const searchInput = document.querySelector('.search-bar input');
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    if (this.value.trim() !== '') {
+                        alert(`Buscando: "${this.value}"`);
+                        this.value = '';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

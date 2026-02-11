@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Box Model y Layout</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Importar fuente para la Card -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[Plus_Jakarta_Sans] h-screen bg-gray-50 p-8 space-y-12">
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Anchuras (`w-`)</h2>
+        <div class="space-y-2">
+            <div class="w-full bg-blue-200 p-2">w-full (100%)</div>
+            <div class="w-1/2 bg-blue-300 p-2">w-1/2 (50%)</div>
+            <div class="w-1/3 bg-blue-400 p-2">w-1/3 (33%)</div>
+            <div class="w-[300px] bg-blue-500 p-2 text-white">w-[300px] (Arbitrario)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Alturas (`h-`)</h2>
+        <div class="h-64 bg-gray-200 flex items-end p-4 border border-gray-400">
+            <div class="h-full bg-red-300 w-20 flex items-center justify-center">h-full</div>
+            <div class="h-1/2 bg-red-400 w-20 flex items-center justify-center">h-1/2</div>
+            <div class="h-10 bg-red-500 w-20 flex items-center justify-center text-white">h-10</div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">Nota: El contenedor gris tiene `h-64`. Si no tuviera altura, los
+            porcentajes hijos no funcionarían.</p>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Padding y Margin</h2>
+        <div class="bg-yellow-200 p-8 m-4 border border-yellow-500">
+            Caja con `p-8` y `m-4`.
+            <div class="bg-white p-4 mt-4">Hijo con `mt-4`.</div>
+        </div>
+        <div class="w-1/2 mx-auto bg-green-200 text-center p-2">
+            Este div tiene `mx-auto` (Centrado Horizontal)
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Bordes</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="border-4 border-blue-500 border-dashed p-4">Border Dashed 4px</div>
+            <div class="border-l-8 border-purple-500 bg-gray-100 p-4">Border Left 8px</div>
+            <div class="divide-y divide-gray-400 border border-gray-400">
+                <div class="p-2">Item 1 (Divide)</div>
+                <div class="p-2">Item 2 (Divide)</div>
+                <div class="p-2">Item 3 (Divide)</div>
+            </div>
+            <div class="space-y-4 bg-gray-100 p-4 border">
+                <div class="bg-white p-2">Item 1 (Space-y-4)</div>
+                <div class="bg-white p-2">Item 2 (Space-y-4)</div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-gray-300">
+
+    <section>
+        <h2 class="text-3xl font-bold mb-8 text-center">Ejercicio Final: Card Component</h2>
+
+        <!-- COMPONENTE CARD -->
+        <div class="max-w-md mx-auto my-10 border-2 border-gray-200 py-7 px-5 rounded-2xl space-y-8 bg-white shadow-lg">
+
+            <img src="assets/mountain_landscape.png" class="w-full h-60 object-cover rounded-md shadow-sm"
+                alt="Paisaje de montaña">
+
+            <div>
+                <h3 class="text-3xl font-bold my-6 text-gray-800">¡Explora la Naturaleza!</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Descubre paisajes impresionantes y conecta con el aire libre.
+                    Nuestras guías te llevarán a los rincones más espectaculares,
+                    desde lagos cristalinos hasta picos nevados. La aventura comienza aquí.
+                </p>
+            </div>
+
+            <a href="#"
+                class="block bg-blue-600 hover:bg-blue-700 transition-colors text-white text-center py-4 rounded-full font-semibold shadow-md">
+                Leer más
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>

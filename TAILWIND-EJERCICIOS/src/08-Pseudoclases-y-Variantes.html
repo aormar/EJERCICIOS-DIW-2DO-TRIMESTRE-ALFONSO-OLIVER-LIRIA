@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08. Pseudoclases y Variantes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[Plus_Jakarta_Sans] bg-gray-50 p-6 md:p-12 space-y-16 pb-20">
+
+    <header class="mb-10">
+        <h1 class="text-4xl font-bold text-slate-800">08. Pseudoclases y Variantes</h1>
+        <p class="text-slate-600 mt-2">Ejemplos de estados interactivos, grupos y peers.</p>
+    </header>
+
+    <!-- 1. Estados Básicos -->
+    <section>
+        <h2 class="text-2xl font-bold mb-6 text-slate-700">1. Estados Básicos (hover, focus, active, disabled)</h2>
+        <div class="flex flex-wrap gap-4 items-center">
+
+            <!-- Hover -->
+            <button class="bg-blue-500 hover:bg-blue-700 transition-colors text-white px-4 py-2 rounded">
+                Hover Me
+            </button>
+
+            <!-- Active -->
+            <button
+                class="bg-green-500 active:bg-green-800 active:scale-95 transition-all text-white px-4 py-2 rounded">
+                Click Me (Active)
+            </button>
+
+            <!-- Focus -->
+            <input type="text" placeholder="Focus Me"
+                class="border border-gray-300 rounded-md py-2 px-4 shadow-sm
+                          focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow">
+
+            <!-- Disabled -->
+            <button disabled
+                class="bg-blue-500 text-white px-4 py-2 rounded opacity-50 cursor-not-allowed hover:bg-blue-500">
+                Disabled
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. Group (Card Overlay) -->
+    <section>
+        <h2 class="text-2xl font-bold mb-6 text-slate-700">2. Group & Group-Hover (Overlay Card)</h2>
+        <p class="mb-4 text-sm text-gray-600">Pasa el ratón por la tarjeta para ver la animación del padre afectando a
+            los hijos.</p>
+
+        <figure class="w-80 h-96 rounded-3xl relative overflow-hidden group/figure shadow-xl cursor-pointer">
+            <!-- Imagen -->
+            <img src="assets/mountain_landscape.png" alt="Paisaje" class="w-full h-full object-cover
+                        group-hover/figure:scale-110
+                        group-hover/figure:rotate-3
+                        transition-transform duration-700">
+
+            <!-- Overlay (capa oscura) -->
+            <div
+                class="absolute inset-0 bg-black/40 opacity-0 group-hover/figure:opacity-100 transition-opacity duration-300">
+            </div>
+
+            <!-- Contenido (Slide Up) -->
+            <div class="absolute w-full h-full bg-gradient-to-t from-purple-900/90 to-transparent
+                        flex flex-col justify-end p-6
+                        top-0
+                        translate-y-full
+                        group-hover/figure:translate-y-0
+                        transition-transform duration-500 ease-out">
+
+                <h3
+                    class="text-white text-2xl font-bold translate-y-4 group-hover/figure:translate-y-0 transition-transform duration-500 delay-100">
+                    Montañas Mágicas
+                </h3>
+                <p
+                    class="text-gray-200 mt-2 text-sm opacity-0 group-hover/figure:opacity-100 transition-opacity duration-500 delay-200">
+                    Descubre la serenidad de las cumbres nevadas. Un viaje inolvidable te espera.
+                </p>
+                <button
+                    class="mt-4 bg-white text-purple-900 px-4 py-2 rounded-full font-bold text-sm hover:bg-purple-100 transition-colors opacity-0 group-hover/figure:opacity-100 transition-opacity duration-500 delay-300">
+                    Ver Más
+                </button>
+            </div>
+        </figure>
+    </section>
+
+    <!-- 3. Peer (Float Label) -->
+    <section>
+        <h2 class="text-2xl font-bold mb-6 text-slate-700">3. Peer (Floated Label Pattern)</h2>
+        <div class="max-w-xs bg-white p-8 rounded-lg shadow-md border">
+            <div class="relative w-full mt-2">
+                <!-- Input con placeholder transparente para el truco peer-placeholder-shown -->
+                <input type="text" id="floating_input" placeholder=" " class="block w-full px-4 py-3 text-gray-900 bg-transparent border-2 border-gray-300 rounded-lg appearance-none 
+                              focus:outline-none focus:ring-0 focus:border-blue-600 peer
+                              transition-colors" />
+
+                <!-- Label animado -->
+                <label for="floating_input" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 left-2
+                              peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
+                              peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2
+                              peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4">
+                    Nombre de Usuario
+                </label>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Haz click en el input. El label se mueve gracias a <code>peer</code>.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Form States (Valid/Invalid) -->
+    <section>
+        <h2 class="text-2xl font-bold mb-6 text-slate-700">4. Form States (Valid/Invalid/Required)</h2>
+        <form class="max-w-md space-y-4">
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Email (Required & Type Email)</label>
+                <input type="email" required placeholder="user@example.com" class="w-full border p-2 rounded
+                              invalid:border-red-500 invalid:text-red-600
+                              focus:invalid:border-red-500 focus:invalid:ring-red-500
+                              valid:border-green-500 valid:text-green-600
+                              focus:outline-none focus:ring-1">
+                <p class="mt-1 text-sm text-red-500 invisible peer-invalid:visible">Email inválido</p>
+            </div>
+
+            <div class="group">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <input type="password" required minlength="8"
+                    class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <!-- Botón con Icono Group -->
+            <button type="submit"
+                class="group/btn relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                    <!-- Icono Lock -->
+                    <svg class="h-5 w-5 text-indigo-500 group-hover/btn:text-indigo-400 transition-colors"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+                Sign in
+            </button>
+        </form>
+    </section>
+
+</body>
+
+</html>

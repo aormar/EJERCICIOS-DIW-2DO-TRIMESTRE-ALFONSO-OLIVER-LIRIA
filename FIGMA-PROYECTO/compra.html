@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraSur - Catálogo</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Header con logo y navegación -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-main">LibraSur</div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="./inicio.html" target="_blank" rel="noopener noreferrer">Tu Libreria</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Compra On-Line</a>
+            <a href="#" class="nav-item">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="main-container">
+        <!-- Panel de filtros -->
+        <aside class="filter-panel">
+            <div class="filter-section">
+                <h3 class="filter-title"><i>📂</i> Filtrar</h3>
+                <ul class="filter-list">
+                    <li class="filter-item active" data-filter="all">
+                        <span class="filter-icon">📦</span>Todos los Productos
+                    </li>
+                    <li class="filter-item" data-filter="action">
+                        <span class="filter-icon">💥</span>Acción
+                    </li>
+                    <li class="filter-item" data-filter="fiction">
+                        <span class="filter-icon">🪐</span>Ficción
+                    </li>
+                    <li class="filter-item" data-filter="horror">
+                        <span class="filter-icon">👻</span>Terror
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Área de contenido -->
+        <main class="content-area">
+            <div class="categories-header">
+                <h2 class="categories-title">📚 Categorías</h2>
+            </div>
+
+            <!-- Grid de cómics -->
+            <div class="comics-grid">
+                <!-- Cómic 1: The Walking Dead -->
+                <div class="comic-card" data-category="horror">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #333 0%, #666 100%);">
+                        🧟
+                    </div>
+                    <div class="comic-content">
+                        <h3 class="comic-title">THE WALKING DEAD</h3>
+                        <p class="comic-description">
+                            Cómic de horror y supervivencia en un mundo postapocalíptico dominado por zombis.
+                        </p>
+                        <div class="comic-price">
+                            <span class="price-main">20.0$</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-title="DEAD: The Walking Dead" data-price="20.0">
+                            <span class="cart-icon">🛒</span> AÑADIR AL CARRITO
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cómic 2: Iron Man -->
+                <div class="comic-card" data-category="action">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);">
+                        🤖
+                    </div>
+                    <div class="comic-content">
+                        <h3 class="comic-title">MARVEL COMICS: THE INVINCIBLE IRON MAN</h3>
+                        <p class="comic-subtitle">Iron - Man</p>
+                        <p class="comic-description">
+                            Cómic de superhéroes de Marvel donde Tony Stark, como Iron Man, debe limpiar su nombre después de ser acusado de un crimen que no cometió.
+                        </p>
+                        <div class="comic-price">
+                            <span class="price-old">25.0$</span>
+                            <span class="price-offer">12.0$</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-title="THE INVINCIBLE IRON MAN" data-price="12.0">
+                            <span class="cart-icon">🛒</span> AÑADIR AL CARRITO
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cómic 3: The Incredible HULK -->
+                <div class="comic-card" data-category="action">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);">
+                        💪
+                    </div>
+                    <div class="comic-content">
+                        <h3 class="comic-title">The Incredible HULK</h3>
+                        <p class="comic-description">
+                            Un número coleccionable de Marvel que promete acción clásica y aventuras icónicas de superhéroes. ¡Una adición esencial para cualquier entusiasta del universo Marvel!
+                        </p>
+                        <div class="comic-price">
+                            <span class="price-main">22.0$</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-title="The Incredible HULK" data-price="22.0">
+                            <span class="cart-icon">🛒</span> AÑADIR AL CARRITO
+                        </button>
+                        <div class="copyright" style="margin-top: 15px; text-align: right; font-size: 12px;">
+                            Alfonso Oliver Liria
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cómic 4: Apocalypse Girl -->
+                <div class="comic-card" data-category="horror">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%);">
+                        👧
+                    </div>
+                    <div class="comic-content">
+                        <h3 class="comic-title">Apocalypse Girl</h3>
+                        <p class="comic-description">
+                            Suspenso sobrenatural donde una entidad oscura, la "Niña" o "Karra", acecha y atormenta a sus víctimas.
+                        </p>
+                        <div class="comic-price">
+                            <span class="price-main">15.0$</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-title="Apocalypse Girl" data-price="15.0">
+                            <span class="cart-icon">🛒</span> AÑADIR AL CARRITO
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cómic 5: Batman -->
+                <div class="comic-card" data-category="action">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #000 0%, #333 100%);">
+                        🦇
+                    </div>
+                    <div class="comic-content">
+                        <h3 class="comic-title">Batman</h3>
+                        <p class="comic-description">
+                            El Caballero de la Noche enfrenta nuevas y aterradoras amenazas en Gotham, en una historia que redefine su legado.
+                        </p>
+                        <div class="comic-price">
+                            <span class="price-main">20.0$</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-title="Batman" data-price="20.0">
+                            <span class="cart-icon">🛒</span> AÑADIR AL CARRITO
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cómic 6: SuperMan -->
+                <div class="comic-card" data-category="fiction">
+                    <div class="comic-image" style="background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);">
+                        🦸
+                    </div>
+                    <div class="comic-content">
+                        <h3 class="comic-title">SuperMan</h3>
+                        <p class="comic-description">
+                            En el cruce de realidades de Infinite Crisis, un Superman de un universo alternativo regresa con una visión radical para "salvar" la Tierra.
+                        </p>
+                        <div class="comic-price">
+                            <span class="price-main">25.0$</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-title="SuperMan" data-price="25.0">
+                            <span class="cart-icon">🛒</span> AÑADIR AL CARRITO
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.aepd.es/politica-de-privacidad-y-aviso-legal" class="footer-link">Política de Privacidad</a>
+            <a href="#" class="footer-link">Cookies</a>
+        </div>
+        <div class="copyright">
+            © 2025 DIW
+        </div>
+    </footer>
+
+    <!-- Notificación -->
+    <div id="notification" class="notification">
+        <span>✓</span>
+        <span id="notification-text">Producto añadido al carrito</span>
+    </div>
+
+    <script>
+        // Sistema de filtrado
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterItems = document.querySelectorAll('.filter-item');
+            const comicCards = document.querySelectorAll('.comic-card');
+            
+            filterItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remover clase active de todos los filtros
+                    filterItems.forEach(filter => {
+                        filter.classList.remove('active');
+                    });
+                    
+                    // Agregar clase active al filtro seleccionado
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filtrar cómics
+                    comicCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCategory = card.getAttribute('data-category');
+                            if (cardCategory === filterValue) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Mostrar mensaje de filtro aplicado
+                    if (filterValue !== 'all') {
+                        const filterText = this.textContent.trim();
+                        alert(`Filtro aplicado: ${filterText}`);
+                    }
+                });
+            });
+            
+            // Añadir al carrito
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notification-text');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const title = this.getAttribute('data-title');
+                    const price = this.getAttribute('data-price');
+                    
+                    // Efecto visual
+                    this.style.transform = 'scale(0.95)';
+                    this.style.backgroundColor = '#4CAF50';
+                    this.innerHTML = '<span class="cart-icon">✓</span> AÑADIDO';
+                    
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                        this.style.backgroundColor = '';
+                        this.innerHTML = '<span class="cart-icon">🛒</span> AÑADIR AL CARRITO';
+                    }, 1500);
+                    
+                    // Mostrar notificación
+                    notificationText.textContent = `"${title}" añadido al carrito - ${price}$`;
+                    notification.classList.add('show');
+                    
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 3000);
+                    
+                    // Simular actualización del carrito
+                    console.log(`Producto añadido: ${title} - Precio: ${price}$`);
+                });
+            });
+            
+            // Búsqueda
+            const searchInput = document.querySelector('.search-bar input');
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const searchTerm = this.value.trim();
+                    if (searchTerm) {
+                        alert(`Buscando: "${searchTerm}"\n\nMostrando resultados de búsqueda...`);
+                        this.value = '';
+                        
+                        // Simular búsqueda
+                        comicCards.forEach(card => {
+                            const title = card.querySelector('.comic-title').textContent;
+                            const description = card.querySelector('.comic-description').textContent;
+                            
+                            if (title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                                description.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                card.style.border = '2px solid #1a237e';
+                                card.style.animation = 'pulse 0.5s';
+                                
+                                setTimeout(() => {
+                                    card.style.border = '';
+                                    card.style.animation = '';
+                                }, 2000);
+                            }
+                        });
+                    }
+                }
+            });
+            
+            // Navegación
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageName = this.textContent.replace(/[📖🛒📞]/g, '').trim();
+                    
+                    // Efecto visual
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                    
+                    alert(`Navegando a: ${pageName}`);
+                });
+            });
+            
+            // Animación CSS para pulsación
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.02); }
+                    100% { transform: scale(1); }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
